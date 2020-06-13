@@ -12,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import Header from "./header"
 import "./layout.css"
+import SubHeader from "./subHeader";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -27,6 +28,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
+      <SubHeader></SubHeader>
 
       <div
         style={{
@@ -39,19 +41,13 @@ const Layout = ({ children }) => {
         <main>{children}</main>
 
 
-
-
         <footer style={{ marginTop: '2em' }}>
           © {new Date().getFullYear()}, Built with
               {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
 
-
-
       </div>
-
-
     </>
   )
 }
