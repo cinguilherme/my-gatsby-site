@@ -28,6 +28,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
+
       <SubHeader></SubHeader>
 
       <div
@@ -39,7 +40,6 @@ const Layout = ({ children }) => {
       >
 
         <main>{children}</main>
-
 
         <footer style={{ marginTop: '2em' }}>
           © {new Date().getFullYear()}, Built with
